@@ -25,9 +25,10 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    
+
 }
-.navbar a{
+
+.navbar a {
     color: #09bab4;
 }
 
@@ -36,6 +37,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .n-btn {
     padding: 15px 45px;
     background-color: #09bab4;
@@ -43,9 +45,11 @@
     color: #fff;
     border-bottom-right-radius: 30px;
 }
-.n-btn a{
+
+.n-btn a {
     color: #fff;
 }
+
 .home-grid {
     padding: 0 10%;
     display: grid;
@@ -61,8 +65,9 @@
     align-self: center;
     width: 95%;
 }
-.home-two{
-display: flex;
+
+.home-two {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -73,15 +78,17 @@ display: flex;
 h1 {
     width: 100%;
 }
-.home-one p{
-    color:#09bab4;
-}
-.home-btn{
-    margin-top: 50px;
-   width: 100%;
+
+.home-one p {
+    color: #09bab4;
 }
 
-.btm{
+.home-btn {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.btm {
     padding: 15px 45px;
     background-color: #09bab4;
     text-decoration: none;
@@ -89,8 +96,7 @@ h1 {
     border-bottom-right-radius: 30px;
 }
 
-.home-two
-h1 {
+.home-two h1 {
     width: 100%;
 }
 
@@ -115,11 +121,72 @@ h1 {
     object-fit: cover;
 }
 
-.mySwiper{
+.mySwiper {
     width: 80%;
     margin: 0 10%;
 }
+
 .swiper-pagination {
     background-color: #09bab4;
     color: red;
 }
+
+.about-home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+    margin-top: 70px;
+}
+
+.about-home-grid h2 {
+    color: #09bab4;
+}
+
+.about-btn {
+    margin-top: 20px;
+}
+
+.service-home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10%;
+}
+
+.heading h2 {
+    color: #09bab4;
+    text-align: center;
+    margin-top: 70px;
+    padding: 0 10%;
+    margin-bottom: 20px;
+}
+
+.s-box {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 95%;
+    padding: 0 5%;
+    padding-block: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.s-box h1 {
+    color: #09bab4;
+}
+
+.vs {
+    background-color: #09bab4;
+    margin: 0 10%;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 70px;
+    background-color: #000;
+    color: #fff;
+}
+
+footer a{
+    color: #fff !important;
+    text-decoration: none;
+}
+
