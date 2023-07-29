@@ -4,6 +4,10 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .navbar {
     padding: 0 10%;
     background-color: #fff !important;
@@ -216,3 +220,36 @@ footer a{
 }
 
 
+@media only screen and (max-width: 1176px) {
+    .home-grid{
+        display: block;
+        padding-top:40px ;
+    }
+    .home-two{
+        margin-bottom: 30px;
+    }
+    .home-grid a{
+        display: none;
+        
+    }
+ 
+    .about-home-grid{
+        display: block;
+    }
+    .about-image{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .about-image img{
+        width: 100%;
+    }
+    .service-home-grid{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .n-btn{
+        display: none;
+    }
+}
