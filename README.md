@@ -28,7 +28,7 @@ To book our services and plan your perfect event, simply fill out the booking fo
 
 ## Contact Us
 
-- Email: info@mintahevents.com
+- Email: mintahf8@gmail.com
 - Phone: +233 55 308 8803
 - Location: Kumasi Technical University
 
