@@ -251,7 +251,7 @@ footer a{
         grid-template-columns: auto;
     }
 
-        .home-btn{
+        .home-btn, .n-btn{
             display: none;
         }
         .home-grid {
