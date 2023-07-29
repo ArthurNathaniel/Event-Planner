@@ -249,9 +249,9 @@ footer a{
         grid-template-columns: auto;
     }
 
-    .n-btn{
-        display: none;
-    }
+        .home-btn{
+            display: none;
+        }
         .home-grid {
             display: flex;
             flex-direction: column;
