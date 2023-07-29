@@ -189,4 +189,30 @@ footer a{
     color: #fff !important;
     text-decoration: none;
 }
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.hero-all{
+    background-color: #f4f6f8;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.hero-all h1{
+    width: 100%;
+    padding: 0 10%;
+}
+
 
