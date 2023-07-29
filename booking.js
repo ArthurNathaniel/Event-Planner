@@ -1,49 +1,48 @@
-emailjs.init("pTaqTZOS5Laa7Bddx");
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
+  // Function to handle form submission and send the email (as shown in the previous answer)
+  // ... (Your existing JavaScript code)
+
+  function updateSubmitButtonText(text) {
+    document.getElementById('submitBtn').textContent = text;
+  }
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    // Prevent the default form submission
     event.preventDefault();
-    changeSubmitButtonText("Please wait, your request is being processed...");
-    sendMail();
+
+    // Show "Please wait" text on the button
+    updateSubmitButtonText('Please wait...');
+
+    // Get the form data
+    const formData = {
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      from_number: document.getElementById('number').value,
+      from_address: document.getElementById('address').value,
+      event_type: document.getElementById('event').value,
+      guest_count: document.getElementById('guest').value,
+      budget: document.getElementById('budget').value,
+      message: document.getElementById('message').value,
+    };
+
+    // Send the email
+    emailjs.send(serviceID, templateID, formData)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        // Optionally, display a success message to the user
+        alert('Thank you! Your booking has been submitted.');
+
+        // Reset the form and button text after successful submission
+        document.getElementById('contact-form').reset();
+        updateSubmitButtonText('Book Now');
+      })
+      .catch((error) => {
+        console.error('Email failed to send:', error);
+        // Optionally, display an error message to the user
+        alert('Sorry, there was an error submitting your booking. Please try again later.');
+
+        // Reset the button text after an error
+        updateSubmitButtonText('Book Now');
+      });
   });
 
-function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    number: document.getElementById("number").value,
-    address: document.getElementById("address").value,
-    event: document.getElementById("event").value,
-    guest: document.getElementById("guest").value,
-    budget: document.getElementById("budget").value,
-    message: document.getElementById("message").value,
-  };
-
-  const serviceID = "service_zm0ml4s";
-  const templateID = "template_k2ke9yz";
-
-  emailjs.send(serviceID, templateID, params).then(
-    function (response) {
-      console.log("Email sent successfully:", response);
-      alert("Your reservation has been sent! We will get back to you soon.");
-      clearForm(); // Optionally, you can call a function to clear the form after successful submission.
-      changeSubmitButtonText("Submit"); // Reset the submit button text after successful submission.
-    },
-    function (error) {
-      console.error("Reservation failed to send:", error);
-      alert(
-        "Sorry, there was an error sending your reservation. Please try again later."
-      );
-      changeSubmitButtonText("Submit"); // Reset the submit button text after unsuccessful submission.
-    }
-  );
-}
-
-function changeSubmitButtonText(text) {
-  document.getElementById("submitBtn").value = text;
-}
-
-function clearForm() {
-  document.getElementById("contact-form").reset();
-}
